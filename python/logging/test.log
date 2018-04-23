@@ -1,0 +1,15 @@
+Sat, 06 Jan 2018 16:19:58 test.py[line:10] DEBUG debug 日志信息
+Sat, 06 Jan 2018 16:19:58 test.py[line:11] INFO info 日志信息
+Sat, 06 Jan 2018 16:19:58 test.py[line:12] WARNING warning 日志信息
+Sat, 06 Jan 2018 16:19:58 test.py[line:13] ERROR error 日志信息
+Sat, 06 Jan 2018 16:19:58 test.py[line:14] CRITICAL critical 日志信息
+Sat, 06 Jan 2018 16:20:12 test.py[line:10] DEBUG debug 日志信息
+Sat, 06 Jan 2018 16:20:12 test.py[line:11] INFO info 日志信息
+Sat, 06 Jan 2018 16:20:12 test.py[line:12] WARNING warning 日志信息
+Sat, 06 Jan 2018 16:20:12 test.py[line:13] ERROR error 日志信息
+Sat, 06 Jan 2018 16:20:12 test.py[line:14] CRITICAL critical 日志信息
+Sat, 06 Jan 2018 16:20:42 test.py[line:10] DEBUG debug 日志信息
+Sat, 06 Jan 2018 16:20:42 test.py[line:11] INFO info 日志信息
+Sat, 06 Jan 2018 16:20:42 test.py[line:12] WARNING warning 日志信息
+Sat, 06 Jan 2018 16:20:42 test.py[line:13] ERROR error 日志信息
+Sat, 06 Jan 2018 16:20:42 test.py[line:14] CRITICAL critical 日志信息

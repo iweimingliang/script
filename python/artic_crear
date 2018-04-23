@@ -1,0 +1,49 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*- #
+
+import os
+import sys
+import datetime
+
+create_path = '/xxx/'
+create_time = datetime.datetime.now().strftime("%Y%m%d-%H%M")
+
+create_filename = create_path + create_time + '.md'
+#create_filename = create_path + sys.argv[1] + '.md'
+
+sys.argv.extend(['None','None','None'])
+if sys.argv[1] == 'None':
+   print "    缺少文章标题，请输入标题" 
+   print "    示例: %s '标题'" %(sys.argv[0]) 
+   print "    示例2: %s '标题' '分类' '标签' '作者'" %(sys.argv[0]) 
+   print "    标题是必备，其他可以不填。会默认创建" 
+   sys.exit()
+if sys.argv[2] == 'None':sys.argv[2] = "随笔"
+if sys.argv[3] == 'None':sys.argv[3] = "随笔"
+if sys.argv[4] == 'None':sys.argv[4] = "萧文"
+
+Title = 'Title:' + sys.argv[1] + '\n'
+Category = 'Category:' + sys.argv[2] + '\n'
+Tags = 'Tags:' + sys.argv[3] + '\n'
+Authors = 'Authors:' + sys.argv[4] + '\n'
+Date = 'Date:' + create_time + '\n'
+Slug = 'Slug:build-blog-by-' + create_time + '\n'
+statement1 = r'#### 本文为原创，转载需遵守:[知识共享署名-禁止演绎 3.0 中国大陆许可协议](http://creativecommons.org/licenses/by-nd/3.0/cn/)'
+statement2 = r'---------------------------------------------------------------------------------------------------------------------------'
+
+if os.path.exists(create_filename): print "%s File already exists" %(create_filename)
+
+f = file(create_filename,'w')
+f.write(Title)
+f.write(Date)
+f.write(Tags)
+f.write(Slug)
+f.write(Category)
+f.write(Authors)
+f.write("\n")
+f.write(statement1)
+f.write("\n")
+f.write(statement2)
+f.write("\n")
+
+f.close()

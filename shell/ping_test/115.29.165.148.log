@@ -1,0 +1,6 @@
+100 packets transmitted, 100 received, 0% packet loss, time 3087ms
+rtt min/avg/max/mdev = 31.000/31.234/33.803/0.371 ms, pipe 2, ipg/ewma 31.214/31.374 ms
+--------------------20170922-15:26:42---------------------
+100 packets transmitted, 100 received, 0% packet loss, time 3085ms
+rtt min/avg/max/mdev = 31.023/31.158/31.418/0.122 ms, pipe 2, ipg/ewma 31.169/31.151 ms
+---------------------------------------------------
