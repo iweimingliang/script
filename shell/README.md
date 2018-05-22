@@ -1,2 +1,2 @@
 # shell_script
-常用shell脚本
+编写的一些shell脚本
