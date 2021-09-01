@@ -226,7 +226,7 @@ EOF
 # 更新系统
 function update_os(){
     echo "update-os"
-#    yum update -y
+    yum update -y
     echo "更新完成，重启服务器。"
 }
 
