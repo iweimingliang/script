@@ -8,8 +8,8 @@ function logs(){
 
 function help(){
     echo "示例:"
-    echo "    $0 xiu8 activity2"
-    echo "    xiu8为项目名称 activity2为日志名称"
+    echo "    $0 project program"
+    echo "    project为项目名称 program为日志名称"
     echo " "
     echo "error code:"
     echo "    1:缺少参数"
