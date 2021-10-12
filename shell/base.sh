@@ -1,19 +1,19 @@
-#!/bin/bash
-
 # 日志处理函数
 function logs(){
    datetime=$(date)
-   echo $datetime $@ 2>&1 >> /opt/app/jenkins/logs/ProgramVersionCreate.log 
+   mkdir -p /home/xiuba/script/ffmpeg/;
+   echo $datetime $@ 2>&1 >> /home/xiuba/script/ffmpeg/info.log 
 }
 
 function help(){
-    echo "示例:"
-    echo "    $0 project program"
-    echo "    project为项目名称 program为日志名称"
+    echo -e "\033[44m帮助:\033[0m"
+    echo -e "\033[42m使用方式:\033[0m"
+    echo "    $0 stream_url"
+    echo "    stream_url 为流地址"
+    echo -e "\033[45m示例:\033[0m"
+    echo "    $0 "
+    echo "    stream_url http://void.2cq.com/liverepeater/932539.flv"
     echo " "
-    echo "error code:"
-    echo "    1:缺少参数"
-    echo "    2:程序日志不存在"
 }
 
 # 主函数
@@ -28,7 +28,9 @@ function main(){
 
     # 判断传递的参数是否正确
     if [[ $# != 2 ]];then
-        echo "1"
+        echo -e "\033[41mError:缺少参数!\033[0m"
+        echo ""
+        help
         exit 1
     fi
 
@@ -37,19 +39,6 @@ function main(){
 
     # 记录项目和程序
     logs "project:" $project "program:" $program
-
-    # 生成程序日志路径
-    program_log="/opt/app/jenkins/logs/""$project/""$program.log"
-    logs "program log:" $program_log
-  
-    echo $program_log
-
-    if [[ -f $program_log ]];then
-        echo "ok"
-    else
-        echo "2"
-        logs "$program_log" "not fonud."
-    fi
     
     logs "---------- end ----------"
 }
