@@ -1,8 +1,9 @@
 # 日志处理函数
 function logs(){
    datetime=$(date)
-   mkdir -p /home/xiuba/script/ffmpeg/;
-   echo $datetime $@ 2>&1 >> /home/xiuba/script/ffmpeg/info.log 
+   mkdir -p $basepath/logs;
+   echo $datetime $@ 2>&1 >> $basepath/logs/info.log
+   echo $datetime $@ 2>&1 >> $basepath/logs/$stream_name.log
 }
 
 function help(){
@@ -18,6 +19,10 @@ function help(){
 
 # 主函数
 function main(){
+    # 获取程序所在地址
+    basepath=$(cd `dirname $0`; pwd)
+
+
     logs "---------- start ----------"
 
     # 判断是否查看帮助
